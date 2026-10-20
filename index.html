@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>nefes | Web Design Portfolio</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/basic.css">
+
+</head>
+<body>
+
+<!-- 헤더: 첫 화면에서는 숨김, 두 번째 화면부터 노출 -->
+<header id="header">
+  <a href="#main" class="logo" data-go="0">
+    <svg xmlns="http://www.w3.org/2000/svg" width="78" height="48" viewBox="0 0 78 48" fill="none">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M61.0467 4.3461C61.5949 1.82411 60.0081 -0.228522 57.219 0.0205078C53.8439 1.01953 51.4738 4.82157 49.8776 7.75161C48.6636 9.99826 47.5705 12.3069 46.6044 14.6675C46.4217 15.1074 46.2394 15.5725 46.0545 16.044L46.0544 16.0442L46.0543 16.0445L46.0543 16.0447L46.0541 16.045C45.6852 16.9858 45.3063 17.9521 44.8958 18.7951C44.6755 19.2463 43.898 20.143 43.3349 20.7924C43.1811 20.9697 43.0434 21.1286 42.9373 21.2549C42.2652 22.0703 41.6184 22.9054 40.9967 23.7593C40.0936 25.0274 39.2283 26.3206 38.3997 27.6371C38.2487 27.877 38.0931 28.128 37.9324 28.387C36.2633 31.0786 34.0564 34.6375 30.9362 35.5993C27.6469 36.6131 27.0661 33.3276 27.1298 30.8429C30.27 30.2903 34.2567 28.7327 36.142 26.0883C38.6297 22.5997 36.8361 18.6506 32.2202 19.7045C29.2113 20.3916 26.7591 22.7597 25.1314 25.2478C24.9168 25.5733 24.6096 26.0868 24.234 26.7148C22.2867 29.9702 18.4985 36.3032 16.2146 35.4896C15.9847 35.3208 15.7624 35.0405 15.7633 34.7538C15.8082 33.0398 16.8247 31.125 17.8631 29.169C19.573 25.9479 21.3423 22.615 18.9299 19.883C18.5724 19.4782 17.5216 19.3132 16.9793 19.4055C13.9559 19.9198 11.8369 23.1711 10.1044 25.8295C9.67816 26.4834 9.27534 27.1015 8.8882 27.6341C9.80254 25.4783 10.8354 22.9375 9.92404 20.5993C8.8715 17.8985 5.78519 19.2474 4.32605 20.721C3.37264 21.6839 -0.243361 26.1137 0.0129739 27.3965C0.0579211 27.4573 0.0887963 27.5025 0.112285 27.5369C0.147985 27.5891 0.166634 27.6164 0.19169 27.6355C0.219046 27.6563 0.254053 27.6674 0.327272 27.6905C0.360868 27.7011 0.402549 27.7143 0.455181 27.7321C0.885872 27.6044 1.01528 27.3668 1.17819 27.0677C1.22063 26.9898 1.26536 26.9077 1.31828 26.8222C1.37006 26.7386 1.4285 26.6434 1.49306 26.5382L1.49337 26.5377C2.60532 24.7257 5.53131 19.9578 7.54488 20.5046C7.79208 20.7378 7.89752 20.8883 7.90844 21.2493C7.9571 22.8611 3.09084 32.9826 1.58985 36.1045L1.58876 36.1068L1.58827 36.1078L1.58703 36.1104L1.58623 36.1121C1.50487 36.2813 1.43348 36.4298 1.37341 36.555C2.63356 36.5676 3.76654 36.5906 5.02637 36.6666C6.69628 33.4186 12.9126 21.9419 16.2874 20.8679C16.5552 20.7828 16.8891 20.7441 17.1459 20.8812C17.3608 20.9961 17.5051 21.1732 17.5556 21.4148C17.7282 22.239 16.9271 23.5838 15.9527 25.2193C14.3689 27.8779 12.3276 31.3045 13.2681 34.5109C13.489 35.2641 13.9182 36.1333 14.5677 36.6156C15.1401 37.0407 15.8314 37.2101 16.5389 37.0998C18.6842 36.7653 20.4629 34.5527 21.6512 32.8934C22.3729 31.874 23.0712 30.8384 23.7454 29.7878C23.7929 31.8967 24.3022 34.28 25.9054 35.7945C26.8857 36.7114 28.1948 37.2074 29.5454 37.1735C33.9861 37.0391 36.7965 32.4532 38.929 28.9735C39.1681 28.5833 39.3987 28.2071 39.6221 27.8525C40.9599 25.7244 42.3881 23.6526 43.9013 21.6426L42.5036 25.2992C42.4583 25.4171 42.3785 25.631 42.2737 25.9116C41.6601 27.5559 40.1919 31.4899 39.808 31.8225C39.2062 31.6601 38.7284 31.5473 38.2086 31.9316C36.6807 33.0599 37.4389 34.7884 38.3304 35.8662C37.8334 37.114 37.2795 38.4596 36.7126 39.8367L36.7125 39.8369L36.7124 39.8372C35.5702 42.6118 34.3755 45.5141 33.4882 48C34.6019 47.9503 36.2176 47.8654 37.3171 47.6867C37.7543 46.5587 38.2008 45.4209 38.6489 44.2791C39.6524 41.7217 40.6641 39.1438 41.5984 36.6078C45.9953 36.0244 47.9317 33.2122 50.1076 29.7333C50.1359 31.8992 50.6757 34.2938 52.2845 35.8642C53.2075 36.7561 54.4519 37.2492 55.7425 37.2346C60.0491 37.2072 63.149 32.4266 65.1201 29.2664L65.1386 29.2369C66.4795 27.0862 68.2549 24.239 69.8824 22.3365C69.9291 22.6265 69.9761 22.9103 70.0225 23.1898C70.3901 25.4081 70.7125 27.353 70.4327 29.916C70.2731 31.3785 68.9478 36.8193 65.9529 35.4783C65.4822 35.2674 65.7396 34.6586 66.0089 34.0217C66.272 33.3997 66.5464 32.7508 66.165 32.4195C64.9553 31.0156 63.2572 32.1375 63.378 33.7153C63.6615 37.4327 68.1109 37.7833 70.7236 36.3335C73.9359 34.5511 75.7757 31.9156 77.6324 28.9079C78.0188 28.2693 78.2173 27.7786 77.6303 27.2434L77.4454 27.2351C77.1523 27.5186 76.6387 28.3411 76.24 28.9796C76.0932 29.2148 75.9619 29.4251 75.8629 29.5743C75.1362 30.6813 74.3266 31.7323 73.4392 32.7185C73.9275 29.6198 73.1587 27.8466 72.3635 26.0124C71.7819 24.671 71.1862 23.2969 71.0575 21.3478C71.1156 21.3175 71.1747 21.2871 71.2345 21.2563L71.2366 21.2552L71.2369 21.2551C71.9806 20.8719 72.8259 20.4365 73.058 19.5704C73.4476 18.1141 71.6593 17.3739 70.6333 18.3469C70.1702 18.7862 70.0284 19.0903 69.8845 19.7C69.8779 19.7282 69.8704 19.7609 69.8621 19.797C69.7996 20.0694 69.6924 20.5365 69.5737 20.7098C68.9833 21.5742 68.3817 22.4321 67.78 23.2901L67.7799 23.2903L67.7797 23.2906L67.7796 23.2907C67.1197 24.2317 66.4596 25.173 65.8143 26.1229C65.4057 26.6969 64.9642 27.3883 64.4876 28.1346C62.4188 31.3741 59.69 35.6472 56.1342 35.8343C55.5735 35.8638 54.8174 35.5529 54.4456 35.1118C53.511 34.0036 53.4428 32.3115 53.4837 30.952C56.4944 30.288 60.8577 28.6123 62.4665 25.9384C64.5951 22.3987 62.3216 18.7717 58.037 19.9972C54.7019 20.9445 52.2131 23.6373 50.6316 26.5831C50.3685 27.0731 50.0521 27.5739 49.7362 28.0738C49.438 28.5458 49.1403 29.0171 48.8884 29.4778C48.0178 31.0732 44.5608 35.4045 42.4942 35.1165C42.4889 35.1122 42.4834 35.1079 42.4777 35.1035C42.4671 35.0953 42.4557 35.0868 42.444 35.0779L42.4433 35.0774C42.3415 35.001 42.212 34.9038 42.2547 34.7861C42.5955 33.8464 42.9698 32.8202 43.361 31.7477L43.3629 31.7425L43.3641 31.7392C44.7484 27.9447 46.3434 23.5722 47.4087 20.399C52.3622 16.6825 59.6584 10.738 61.0467 4.3461ZM59.2352 3.68126C59.4274 2.55617 58.917 1.34645 57.5456 1.3508C53.3017 2.7674 50.3982 11.4475 48.6781 16.5899L48.678 16.5903C48.433 17.3226 48.2121 17.9832 48.0147 18.5408L49.0354 17.7245C53.0028 14.4072 58.3174 9.07133 59.2352 3.68126ZM59.336 21.0378C61.5035 20.9797 61.073 22.9385 60.5573 24.2989C59.5902 26.8525 57.5277 28.1672 55.1251 29.2303L53.6034 29.828C54.3049 26.7354 55.9357 22.0472 59.336 21.0378ZM34.4827 24.2552C35.0356 22.9228 35.4712 20.9009 33.3938 20.8364C31.5417 21.2716 30.428 22.593 29.4561 24.1433C28.4131 25.8179 27.7018 27.6726 27.3601 29.609C27.4214 29.5937 27.4819 29.5788 27.5418 29.564C27.9431 29.4649 28.3173 29.3726 28.7121 29.2185C31.1174 28.2357 33.4633 26.7112 34.4827 24.2552Z" fill="#2C67FA"/>
+    </svg>
+  </a>
+  <nav>
+    <a href="#about" data-go="1">Work experience</a>
+    <a href="#work" data-go="2">Portfolio</a>
+    <a href="#contact" data-go="4">Contact us</a>
+  </nav>
+</header>
+
+<div id="wrap" tabindex="0">
+
+  <!-- 1. MAIN -->
+  <section class="sec" id="main">
+    <i class="blob b1">
+      
+    </i>
+    <i class="blob b2"></i>
+    <i class="blob b3"></i>
+    <h1 class="hero">
+      <span class="p">P</span>
+      <span class="rest"><small>Web Design</small>ortfolio</span>
+    </h1>
+    <nav class="gnb">
+      <a href="#main" class="on" data-go="0">main</a>
+      <a href="#about" data-go="1">Work experience</a>
+      <a href="#work" data-go="2">Portfolio</a>
+      <a href="#contact" data-go="4">Contact us</a>
+    </nav>
+  </section>
+
+  <!-- 2. ABOUT / ACTIVITIES -->
+  <section class="sec" id="about">
+    <i class="blob b1"></i>
+    <i class="blob b2"></i>
+    <div class="wrap2">
+      <div class="intro">
+        <h2>디자인을 넘어 비즈니스를<b>설계하는 웹디자이너</b></h2>
+        <p>단순히 아름다운 비주얼에 그치지 않고, 철저한 사용자 데이터 분석과 UI/UX 최적화를 통해 기업의 매출 상승과 브랜드 가치를 극대화해 왔습니다.</p>
+        <p>전략적 웹 기획부터 고도화된 UI/UX 디자인까지, 프로젝트의 전 과정을 리드하며 성공적인 디지털 경험을 구축합니다.</p>
+      </div>
+
+      <div class="info">
+        <div class="top">
+          <div class="row">
+            <div class="label">About<span>기본정보</span></div>
+            <div class="card">
+              <b>조은희<em>Cho eun hee</em></b>
+              <p>+82 10-3092-8823</p>
+              <p>nefes2082@gmail.com</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="label">Skills<span>사용 프로그램</span></div>
+            <div class="card">
+              <p>Photoshop, Illustrator, Figma</p>
+              <p>html, css</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="label">Activities<span>활동이력</span></div>
+          <ul class="acts">
+            <li class="act"><b>(주)디핀</b><span>Web Designe</span><small>Figma / Photoshop / illustration</small></li>
+            <li class="act"><b>BIS</b><span>Web Designer &amp; Web Publishe</span><small>Figma / XD / Photoshop / illustration / html / css</small></li>
+            <li class="act"><b>케이솔루션</b><span>Web Designer &amp; Web Publishe</span><small>Photoshop / illustration / html / css</small></li>
+            <li class="act"><b>에스케이피알</b><span>Web Designer &amp; Web Publishe</span><small>Figma / XD / Photoshop / illustration / html / css</small></li>
+            <li class="act"><b>바튜매커뮤니케이션</b><span>Web Designer &amp; Web Publishe</span><small>Photoshop / illustration / html / css</small></li>
+            <li class="act"><b>에즈넷</b><span>Web Designer &amp; Web Publishe</span><small>Photoshop / illustration / html / css</small></li>
+            <li class="act"><b>㈜지앤글로벌</b><span>Web Designer &amp; Web Publishe</span><small>Photoshop / illustration / html / css</small></li>
+            <li class="act"><b>웹사이트</b><span>Web Designe</span><small>Photoshop / illustration / html / css</small></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- 3. WORK EXPERIENCE (캐러셀) -->
+  <section class="sec center-sec" id="work">
+    <i class="blob b1"></i>
+    <h2 class="title">Work experience</h2>
+    <p class="desc">복잡한 금융 및 비즈니스 시스템의 UI/UX를 직관적으로 설계하고, 단순한 시각화를 넘어 서비스의 실질적인 가치를 창출합니다.</p>
+
+    <div class="device">
+      <div class="slides" id="slides">
+        <!-- 슬라이드는 아래 스크립트의 projects 배열에서 생성됩니다 -->
+        <div class="track" id="track"></div>
+      </div>
+    </div>
+    <div class="dots" id="dots"></div>
+  </section>
+  
+  <!-- 4. FIGMA ASSETS -->
+  <section class="sec center-sec" id="assets">
+    <h2 class="title">Figma Assets</h2>
+    <div class="embeds">
+      <!-- Figma 공유 링크의 embed 주소를 iframe src에 넣으세요 -->
+      <div class="embed"><div></div></div>
+      <div class="embed"><div></div></div>
+    </div>
+  </section>
+  
+  <!-- 5. CONTACT US -->
+  <section class="sec center-sec" id="contact">
+    <i class="blob b1"></i><i class="blob b2"></i>
+    <h2 class="title">Contact us</h2>
+    <p class="desc">오랜 실무 경험에서 나오는 안정적인 기획력과 디테일로 최상의 결과물을 구현합니다.<br>새로운 도전과 협업에 대해 언제든지 편안하게 제안해 주세요.</p>
+
+    <ul class="contact-links">
+      <li><a href="https://github.com/lfurita" target="_blank" rel="noopener" aria-label="GitHub 열기"><b>GitHub</b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></li>
+      <li><b>M.B</b><span>010.3092.8823</span><button type="button" class="copy-btn" aria-label="전화번호 복사"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></svg></button></li>
+      <li><b>E.Mail</b><span>euni91823@gmail.com</span><button type="button" class="copy-btn" aria-label="이메일 복사"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></svg></button></li>
+      
+      <li><a href="https://app.notion.com/p/bdf0147cc69d83e79e15819bcc87b3a3?source=copy_link" target="_blank" rel="noopener" aria-label="Notion 열기"><b>Notion</b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></li>
+    </ul>
+
+    <ul class="skill-chips">
+      <li>UI/UX Design</li><li>Web Publishing</li><li>Design System</li><li>Responsive Web</li><li>HTML5</li><li>CSS3</li>
+    </ul>
+
+    <p class="status">Available for Work <i></i> Seoul, South Korea</p>
+    <div class="copy-toast" id="copyToast" role="status">복사되었습니다</div>
+  </section>
+
+</div>
+
+<script>
+(() => {
+  const wrap = document.getElementById('wrap');
+  const secs = [...document.querySelectorAll('.sec')];
+  const gnbLinks = document.querySelectorAll('.gnb a[data-go]');
+  const hdrLinks = document.querySelectorAll('#header nav a[data-go]');
+  const mobile = () => matchMedia('(max-width:900px)').matches;
+  let idx = 0;
+
+  // 현재 섹션 표시 (헤더 노출/메뉴 활성화)
+  function setActive(i) {
+    idx = i;
+    try { sessionStorage.setItem('navIdx', i); } catch (_) {}   // 새로고침 시 위치 복원용
+    document.body.classList.toggle('has-header', i > 0);
+    hdrLinks.forEach(a => {
+      const n = +a.dataset.go;
+      a.classList.toggle('on', n === i);
+    });
+    gnbLinks.forEach(a => a.classList.toggle('on', +a.dataset.go === i));
+  }
+  let navTarget = null, navTimer = null;
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const i = secs.indexOf(e.target);
+      if (navTarget !== null && i !== navTarget) return;   // 이동 중에는 클릭한 메뉴 유지
+      navTarget = null;
+      setActive(i);
+    });
+  }, { root: mobile() ? null : wrap, threshold: .55 });
+  secs.forEach(s => io.observe(s));
+
+  // 섹션으로 이동
+  function go(i) {
+    i = Math.max(0, Math.min(secs.length - 1, i));
+    secs[i].scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // 키보드 (휠/터치는 브라우저 스냅 스크롤이 처리)
+  addEventListener('keydown', e => {
+    if (mobile()) return;
+    const next = ['ArrowDown', 'PageDown'].includes(e.key) || (e.key === ' ' && !e.shiftKey);
+    const prev = ['ArrowUp', 'PageUp'].includes(e.key) || (e.key === ' ' && e.shiftKey);
+    if (next) { e.preventDefault(); go(idx + 1); }
+    if (prev) { e.preventDefault(); go(idx - 1); }
+    if (e.key === 'Home') { e.preventDefault(); go(0); }
+    if (e.key === 'End') { e.preventDefault(); go(secs.length - 1); }
+  });
+
+  // 메뉴 클릭
+  document.querySelectorAll('[data-go]').forEach(a => a.addEventListener('click', e => {
+    e.preventDefault();
+    const n = +a.dataset.go;
+    if (n === idx && !navTimer) return;
+    navTarget = n;
+    setActive(n);                                  // 클릭한 메뉴가 "main" 스타일로 즉시 변경
+    clearTimeout(navTimer);
+    navTimer = setTimeout(() => {                  // 스타일 변화가 보인 뒤 섹션 이동
+      go(n);
+      navTimer = setTimeout(() => { navTimer = null; navTarget = null; }, 1500);
+    }, 350);
+  }));
+
+  // ---------- 캐러셀 (스와이프) ----------
+  // 프로젝트 내용은 여기서 수정/추가하세요. img는 images 폴더의 스크린샷 경로입니다.
+  const projects = [
+    { title: '슈퍼트레이더', year: '2025', role: 'Web Design', pct: [['디자인', 100]], skills: 'Figma / Photoshop / illustration', img: 'image/sample/Supertrader.jpg', design: 'https://www.figma.com/design/A8pUqLsBcagl9i5nr7DtFl/sample?node-id=23-21&t=LOc15NLjqXEjBtoG-1', site: 'https://play.google.com/store/search?q=%EC%8A%88%ED%8D%BC%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8D%94&c=apps&hl=ko',
+      urls: [{ label: 'PC', href: 'https://supertrader.pro/v2' }, { label: 'Mobile', href: 'https://m.supertrader.pro/v2' }] },
+    { title: '슈퍼스톡 SUPERSTOCK (구.골드핑거)', year: '2025~26', role: 'Web Design', pct: [['디자인', 100]], skills: 'Figma / Photoshop / illustration', img: 'image/sample/goldfinger.jpg', design: 'https://www.figma.com/design/A8pUqLsBcagl9i5nr7DtFl/sample?node-id=4-21&t=gvXkBGwYNKTNX3PV-1', site: 'https://play.google.com/store/apps/details?id=com.superstocktrading&hl=ko' },
+    { title: '유비즈 보험비교 서비스', year: '2022~23', role: 'Web Design & Web Publishing', pct: [['디자인', 100], ['퍼블리싱', 100]],
+      skills: 'Figma / Photoshop / illustration / html / css', img: 'image/sample/bis_ubiz.jpg', design: 'https://www.figma.com/design/A8pUqLsBcagl9i5nr7DtFl/sample?node-id=4-22&t=gvXkBGwYNKTNX3PV-1', publish: 'https://github.com/lfurita/test-site/tree/bf3dda0b5dc4b55da7eb99f3204af875693ca835/ubiz', site: 'https://testsite.toursafe.co.kr/ubiz/' },
+    { title: '통합용 여행자보험', year: '2023', role: 'Web Design & Web Publishing', pct: [['디자인', 100], ['퍼블리싱', 100]], skills: 'Figma / Photoshop / illustration / html / css', img: 'image/sample/bis_new2023.jpg', design: 'https://www.figma.com/design/A8pUqLsBcagl9i5nr7DtFl/sample?node-id=4-24&t=kYq3Y2yByZOovpCe-1', publish: 'https://github.com/lfurita/test-site/tree/bf3dda0b5dc4b55da7eb99f3204af875693ca835/new2023', site: 'https://testsite.toursafe.co.kr/new2023/' },
+
+    { title: 'BIS', year: '2023', role: 'Web Design & Web Publishing', pct: [['디자인', 100], ['퍼블리싱', 100]], skills: 'Figma / Photoshop / illustration / html / css', img: 'image/sample/bis_renewal.jpg', design: 'https://www.figma.com/design/A8pUqLsBcagl9i5nr7DtFl/sample?node-id=12-49&t=rWty4sdOeMgraIoo-1', publish: 'https://github.com/lfurita/test-site/tree/bf3dda0b5dc4b55da7eb99f3204af875693ca835/bis', site: 'https://testsite.toursafe.co.kr/bis/' },
+    { title: 'U-Direct B2B System', year: '2022', role: 'Web Design & Web Publishing', pct: [['디자인', 100], ['퍼블리싱', 100]], skills: 'Photoshop / illustration / html / css', img: 'image/sample/U-Direct-B2B.jpg', design: 'https://www.figma.com/design/A8pUqLsBcagl9i5nr7DtFl/sample?node-id=18-5&t=rWty4sdOeMgraIoo-1', publish: 'https://github.com/lfurita/test-site/tree/bf3dda0b5dc4b55da7eb99f3204af875693ca835/samsun.b2b', site: 'https://testsite.toursafe.co.kr/samsun.b2b/' },
+    { title: '에브리데이페이 렌딩페이지', year: '20XX', role: 'Web Design & Web Publishing', pct: [['디자인', 100], ['퍼블리싱', 100]], skills: 'Photoshop / illustration / html / css', img: 'image/sample/everyday_pay.jpg', design: 'https://www.figma.com/design/A8pUqLsBcagl9i5nr7DtFl/sample?node-id=40-8&t=ZuPFGL35osdgodhZ-1' },
+    { title: '보다', year: '2016', role: 'Web Design & Web Publishing', pct: [['디자인', 100], ['퍼블리싱', 100]], skills: 'Photoshop / illustration / html / css', img: 'image/sample/vo-da.jpg', design: 'https://www.figma.com/design/A8pUqLsBcagl9i5nr7DtFl/sample?node-id=14-62&t=rWty4sdOeMgraIoo-1' },
+    { title: '창조경제혁신센터', year: '2016', role: 'Web Design & Web Publishing', pct: [['디자인', 100], ['퍼블리싱', 100]], skills: 'Photoshop / illustration / html / css', img: 'image/sample/creativekorea.jpg', design: 'https://www.figma.com/design/A8pUqLsBcagl9i5nr7DtFl/sample?node-id=4-29&t=rWty4sdOeMgraIoo-1' },
+    { title: '전국금속노동조합 충남지부', year: '2016', role: 'Web Design & Web Publishing', pct: [['디자인', 100], ['퍼블리싱', 100]], skills: 'Photoshop / illustration / html / css', img: 'image/sample/cn-kmwu.jpg', design: 'https://www.figma.com/design/A8pUqLsBcagl9i5nr7DtFl/sample?node-id=4-29&t=rWty4sdOeMgraIoo-1' },
+    { title: '달테이블', year: '2016', role: 'Web Design & Web Publishing', pct: [['디자인', 100], ['퍼블리싱', 100]], skills: 'Photoshop / illustration / html / css', img: 'image/sample/daltable.jpg', design: 'https://www.figma.com/design/A8pUqLsBcagl9i5nr7DtFl/sample?node-id=4-31&t=rWty4sdOeMgraIoo-1' },
+    { title: '캔버스 듀랑고', year: '2016', role: 'Web Design & Web Publishing', pct: [['디자인', 100], ['퍼블리싱', 100]], skills: 'Photoshop / illustration / html / css', img: 'image/sample/durango.jpg', design: 'https://www.figma.com/design/A8pUqLsBcagl9i5nr7DtFl/sample?node-id=4-32&t=rWty4sdOeMgraIoo-1' },
+    { title: '호토모토 도시락', year: '2012', role: 'Web Design & Web Publishing', pct: [['디자인', 100], ['퍼블리싱', 100]], skills: 'Photoshop / illustration / html / css', img: 'image/sample/hotto.jpg', design: 'https://www.figma.com/design/A8pUqLsBcagl9i5nr7DtFl/sample?node-id=4-33&t=rWty4sdOeMgraIoo-1' },
+    { title: '서울교육문화회관', year: '2012', role: 'Web Design & Web Publishing', pct: [['디자인', 100], ['퍼블리싱', 100]], skills: 'Photoshop / illustration / html / css', img: 'image/sample/skmh7.jpg', design: 'https://www.figma.com/design/A8pUqLsBcagl9i5nr7DtFl/sample?node-id=4-34&t=rWty4sdOeMgraIoo-1' },
+    { title: '쏘렌토', year: '2012', role: 'Web Design & Web Publishing', pct: [['디자인', 100], ['퍼블리싱', 100]], skills: 'Photoshop / illustration / html / css', img: 'image/sample/sorrento.jpg', design: 'https://www.figma.com/design/A8pUqLsBcagl9i5nr7DtFl/sample?node-id=30-40&t=LOc15NLjqXEjBtoG-1' }
+  ];
+
+
+  const slidesEl = document.getElementById('slides');
+  const track = document.getElementById('track');
+  const dots = document.getElementById('dots');
+  const last = projects.length - 1;
+  let cur = 0;
+
+  track.innerHTML = projects.map(p => `
+    <article class="slide">
+      <div class="shot" style="background-image:url('${p.img}'),linear-gradient(135deg,#46586a,#2a3440)"></div>
+      <div class="info-p">
+        <h3>${p.title}</h3>
+        <div class="role">${p.role}</div>
+        ${p.pct ? `<div class="pct">${p.pct.map(([k, v]) => `${k}<b>${v}%</b>`).join('<br>')}</div>` : ''}
+        <div class="sk">Skills</div>
+        <p>${p.skills}</p>
+        ${p.year ? `<div class="sk">Year of Work</div>
+        <p>${p.year}</p>` : ''}
+        ${p.urls ? `<div class="sk">URL</div>
+        <div class="urls">${p.urls.map(u => `<a href="${u.href}" target="_blank" rel="noopener">${u.label}</a>`).join('')}</div>` : ''}
+        <div class="btns">
+          ${p.design ? `<a href="${p.design}" target="_blank" rel="noopener">Design view</a>` : ''}
+          ${p.publish ? `<a href="${p.publish}" target="_blank" rel="noopener">Publishing view</a>` : ''}
+          ${p.site ? `<a class="site-url" href="${p.site}" target="_blank" rel="noopener">Site URL</a>` : ''}
+        </div>
+      </div>
+    </article>`).join('');
+
+  // 스크린샷 맞춤: cover 없이, 이미지 비율에 따라 폭/높이 중 하나에 딱 맞추고 위쪽 기준으로 정렬
+  //  - 이미지가 프레임보다 길면: 폭 100%, 아래쪽만 잘림 (위에서부터 보임)
+  //  - 이미지가 프레임보다 짧으면: 높이 100%로 키워서 아래쪽 빈 배경이 보이지 않게 함
+  const shots = [...track.querySelectorAll('.shot')];
+  function fitShot(el) {
+    if (!el._nat) return;
+    const [nw, nh] = el._nat;
+    const longer = (nh / nw) * el.clientWidth >= el.clientHeight;
+    el.style.backgroundRepeat = 'no-repeat, no-repeat';
+    el.style.backgroundPosition = 'center top, center';
+    el.style.backgroundSize = (longer ? '100% auto' : 'auto 100%') + ', 100% 100%';
+  }
+  shots.forEach((el, i) => {
+    const img = new Image();
+    img.onload = () => { el._nat = [img.naturalWidth, img.naturalHeight]; fitShot(el); };
+    img.src = projects[i].img;
+  });
+  addEventListener('resize', () => shots.forEach(fitShot));
+
+  projects.forEach((_, i) => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.setAttribute('aria-label', `${i + 1}번 슬라이드`);
+    b.onclick = () => show(i);
+    dots.appendChild(b);
+  });
+
+  function show(i) {
+    cur = Math.max(0, Math.min(last, i));
+    track.style.transform = `translateX(${-cur * 100}%)`;
+    [...track.children].forEach((el, k) => el.classList.toggle('active', k === cur));   // 현재 슬라이드에 .active
+    [...dots.children].forEach((d, k) => d.classList.toggle('on', k === cur));
+  }
+
+  // 마우스 드래그 / 터치 스와이프
+  let startX = null, dx = 0, moved = false, captured = false;
+  slidesEl.addEventListener('pointerdown', e => {
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+    startX = e.clientX; dx = 0; moved = false; captured = false;
+  });
+  slidesEl.addEventListener('pointermove', e => {
+    if (startX === null) return;
+    dx = e.clientX - startX;
+    if (!moved && Math.abs(dx) > 6) {
+      moved = true;
+      track.classList.add('nodur'); slidesEl.classList.add('drag');
+      slidesEl.setPointerCapture(e.pointerId); captured = true;
+    }
+    if (!moved) return;
+    let d = dx;
+    if ((cur === 0 && d > 0) || (cur === last && d < 0)) d *= .35;   // 양끝 저항
+    track.style.transform = `translateX(calc(${-cur * 100}% + ${d}px))`;
+  });
+  function endDrag() {
+    if (startX === null) return;
+    track.classList.remove('nodur'); slidesEl.classList.remove('drag');
+    const th = Math.min(90, slidesEl.offsetWidth * .15);
+    show(dx < -th ? cur + 1 : dx > th ? cur - 1 : cur);
+    startX = null;
+    setTimeout(() => { moved = false; }, 0);
+  }
+  slidesEl.addEventListener('pointerup', endDrag);
+  slidesEl.addEventListener('pointercancel', endDrag);
+  // 드래그 직후 버튼 클릭 방지, 이미지 끌림 방지
+  slidesEl.addEventListener('click', e => { if (moved) { e.preventDefault(); e.stopPropagation(); } }, true);
+  slidesEl.addEventListener('dragstart', e => e.preventDefault());
+  slidesEl.addEventListener('click', e => {
+    const a = e.target.closest('a[href="#"]'); if (a) e.preventDefault();
+  });
+
+  // 트랙패드 좌우 스와이프, 좌우 방향키
+  let wheelLock = false;
+  document.getElementById('work').addEventListener('wheel', e => {
+    if (Math.abs(e.deltaX) <= Math.abs(e.deltaY) || Math.abs(e.deltaX) < 20) return;
+    e.preventDefault();
+    if (wheelLock) return;
+    wheelLock = true; setTimeout(() => wheelLock = false, 500);
+    show(cur + (e.deltaX > 0 ? 1 : -1));
+  }, { passive: false });
+  addEventListener('keydown', e => {
+    if (idx !== 2) return;
+    if (e.key === 'ArrowRight') show(cur + 1);
+    if (e.key === 'ArrowLeft') show(cur - 1);
+  });
+
+  show(0);
+
+  // 새로고침 시 마지막으로 머물던 섹션으로 복원
+  let saved = 0;
+  try { saved = parseInt(sessionStorage.getItem('navIdx'), 10) || 0; } catch (_) {}
+  if (saved > 0 && saved < secs.length) {
+    navTarget = saved;
+    setActive(saved);
+    secs[saved].scrollIntoView({ behavior: 'instant', block: 'start' });   // 애니메이션 없이 즉시 이동
+    setTimeout(() => { navTarget = null; }, 500);
+  } else {
+    setActive(0);
+  }
+})();
+</script>
+
+<script>
+(() => {
+  // 복사 아이콘: 같은 줄의 회색 글씨(<span>) 내용을 그대로 복사
+  function toastMsg(msg) {
+    let t = document.getElementById('copyToast');
+    if (!t) { t = document.createElement('div'); t.id = 'copyToast'; t.className = 'copy-toast'; document.body.appendChild(t); }
+    t.textContent = msg; t.classList.add('show');
+    clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove('show'), 1600);
+  }
+  function legacyCopy(text) {                       // http 등 Clipboard API를 못 쓰는 환경용
+    const ta = document.createElement('textarea');
+    ta.value = text; ta.setAttribute('readonly', '');
+    ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0;';
+    document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0, text.length);
+    let ok = false;
+    try { ok = document.execCommand('copy'); } catch (_) {}
+    ta.remove();
+    return ok;
+  }
+  document.addEventListener('click', e => {
+    const btn = e.target.closest('.copy-btn');
+    if (!btn) return;
+    const src = btn.closest('li').querySelector('span');
+    let text = src ? src.textContent.trim() : '';
+    if (/^\d{2,3}\.\d{3,4}\.\d{4}$/.test(text)) text = text.replace(/\./g, '-');   // 전화번호: 010.3092.8823 → 010-3092-8823 로 복사
+    if (!text) return;
+    const done = ok => {
+      toastMsg(ok ? '복사되었습니다' : '복사에 실패했습니다');
+      if (ok) { btn.classList.add('copied'); setTimeout(() => btn.classList.remove('copied'), 1200); }
+    };
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(() => done(true), () => done(legacyCopy(text)));
+    } else {
+      done(legacyCopy(text));
+    }
+  });
+  document.querySelectorAll('#contact a[href="#"]').forEach(a => a.addEventListener('click', e => e.preventDefault()));
+})();
+</script>
+
+</body>
+</html>

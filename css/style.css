@@ -1,0 +1,374 @@
+/* 
+  v1.0 | 20220516
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
+
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0; padding: 0; border: 0;
+  font-size: 100%; font: inherit; font-family: var(--font-family-en), var(--font-family-kr), "맑은고딕", Dotum, sans-serif; line-height: 1.2; letter-spacing: -0.0206rem; color: var(--color-font);
+  vertical-align: baseline;
+}
+
+/* 1920px 기준 1rem = 16px, 화면 폭에 따라 비례 */
+html{font-size:clamp(11px,.8334vw,20px)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Pretendard','Roboto',sans-serif;
+  color:var(--text);background:var(--bg);
+  overflow:hidden;height:100vh;height:100dvh;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+button {
+  outline: none;
+  cursor: pointer;
+}
+div { display: block }
+article, aside, footer, header, hgroup, main, nav, section { display: block }
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+address { display: block; }
+figcaption { display: block }
+hr {
+  display: block; overflow: hidden;
+  unicode-bidi: isolate;
+  margin-block-start: 0.5em; margin-block-end: 0.5em; margin-inline-start: auto; margin-inline-end: auto;
+  border-style: inset; border-width: 1px
+}
+map {
+  display: inline
+}
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: block;
+}
+video {
+  object-fit: contain;
+}
+video:-webkit-full-page-media {
+  margin: auto; position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  max-height: 100%; max-width: 100%;
+}
+img {
+  border-style: none;
+}
+button {
+  background: none;
+  border: 0;
+}
+strong {
+  display: block;
+  font-weight: 700;
+}
+p {
+  font-size: var(--font-size-16); font-weight: 400;
+}
+
+/* form elements */
+form {
+  display: inline-block;
+  width: auto;
+}
+:-webkit-any(table, thead, tbody, tfoot, tr) > form:-internal-is-html {
+  display: none !important;
+}
+label {
+  cursor: default;
+}
+legend {
+  display: block;
+  padding-inline-start: 2px;
+  padding-inline-end: 2px;
+  border: none
+}
+
+.clearfix:after {
+  content: " "; 
+  display: block; 
+  clear: both;
+}
+.inb {
+  font-size: 0;
+}
+.inb > * {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/**************************************************** 스크롤바 style css */
+/* 스크롤바 설정*/
+.Cntn-bsc::-webkit-scrollbar {
+  width: 8px;
+}
+/* 스크롤바 막대 설정*/
+.Cntn-bsc::-webkit-scrollbar-thumb {
+  background: var(--color-border-1); border: 1px solid rgba(0, 0, 0, .05);
+  border-radius: 4px;
+}
+/* 스크롤바 뒷 배경 설정*/
+.Cntn-bsc::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+/******************************************************************
+          selectBox Style Css 
+********************************************************************/
+select { 
+  border-radius:0;          /* 아이폰 사파리 보더 없애기 */
+  /* 네이티브 외형 감추기 */ 
+  -webkit-appearance:none;  /* 화살표 없애기 for chrome*/ 
+      -moz-appearance:none;  /* 화살표 없애기 for firefox*/ 
+          appearance:none;  /* 화살표 없애기 공통*/
+  background: none;  /* 화살표 모양의 이미지 */ 
+  background-size: 0;
+}
+/* IE 10, 11의 네이티브 화살표 숨기기 */
+select::-ms-expand { 
+  display: none;
+}
+select {
+  -webkit-appearance: none; /* 스핀 버튼 제거 */
+          appearance: none;
+  border-radius: 0; /* border-radius 제거 */
+  border: none;     /* select 요소의 테두리 제거 */
+  width: 100%;
+  padding: 0;
+  cursor: pointer;
+}
+option {
+  border: none;
+  border-radius: 0;
+}
+select:focus, select:active {
+  outline: 0;
+}
+.select-box {
+  position: relative; z-index: 2;
+  display: flex; justify-content: center; align-items: center;
+  width: 100%; height: 50px;
+  background-color: var(--color-navy);
+  border: 1px solid var(--color-fontGray); border-radius: 7px;
+  cursor: pointer;
+}
+.select-box:after {
+  content: "▼";
+  width: 14px; height: 14px;
+  position: absolute; top: 0; bottom: 0; right: 15px;
+  font-size: var(--font-14); color: var(--color-fontGray);
+  margin: auto;
+}
+.select-box:after:focus {
+  transform: rotate(180deg);
+}
+.select-box select {
+  font-size: var(--font-14); font-weight: 300; line-height: 17px;
+  width: 100%; height: 100%;
+  color: var(--color-fontGray);
+  padding-left: 15px;
+}
+.select-box option {
+  background: var(--color-navy); border: 1px solid var(--color-lime);
+  font-size: var(--font-14); line-height: 24px; font-weight: 300;
+  color: var(--color-fontGray);
+  padding: 8px 15px;
+  margin-top: 3px;
+}
+.select-box option:selected {
+  background: #0076FF;
+}
+
+
+
+
+
+/******************************************************************
+          input & textarea Style Css 
+********************************************************************/
+input[type=text], input[type=tel], input[type=email], input[type=password], input[type=url], input[type=number], input[type=search], input[type=date],
+textarea {
+-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+        box-sizing: border-box; 
+outline: none;
+resize: none;
+}
+input[type="number"] {
+width: 0%;
+-webkit-appearance: textfield;
+    -moz-appearance: textfield;
+        appearance: textfield;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* input search x 버튼 삭제 및 클리어 IE의 경우 */
+input::-ms-clear,
+input::-ms-reveal {
+display:none;
+}
+
+/* input search x 버튼 삭제 및 클리어 크롬의 경우 */
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration{
+display:none;
+}
+
+/* PLACEHOLDER */
+::-webkit-input-placeholder { color: var(--color-fontGray); }
+  ::-ms-input-placeholder { color: var(--color-fontGray); }
+        ::-moz-placeholder { color: var(--color-fontGray); }
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder { color: transparent; }
+        input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder { color: transparent; }
+                input:focus::-moz-placeholder, textarea:focus::-moz-placeholder { color: transparent; }
+
+input {
+vertical-align: middle;
+outline: none; border:none;
+border-radius: 0px; padding: 0; margin: 0;
+}
+
+
+
+
+/******************************************************************
+          Button Style Css 
+********************************************************************/
+.button {
+  position: relative;
+  display: flex; justify-content: center; align-items: center;
+  width: 100%;
+  padding: 0px;
+  text-align: center; text-decoration: none;
+  cursor: pointer;
+}
+
+.default {
+  width: 100%; height: 50px;
+  font-size: var(--font-20); line-height: 24px; font-weight: 900;
+  color: var(--color-fontNavy);
+  background-color: var(--color-lime); border-radius: 7px;
+}
+.Large {
+  width: 100%; height: 50px;
+}
+.Medium {
+  width: 50%; height: 40px;
+}
+.Small {
+  width: 25%; height: auto;
+}
+
+
+
+:root {
+  --fc-basic:rgba(0, 0, 0, 0.88);
+  --fc-placeholder:#C2C5D3;
+  --fc-white:#fff;
+
+  --blue:#2b64f5;
+  --cyan:#0aa5e8;
+  --text:#1e1e1e;
+  --gray:#777;
+  --bg:#fbfbfb;
+  --bg-white:#fff;
+  --header-h:4.25rem;
+
+  /* font family */
+  --font-family-en : "Roboto";
+  --font-family-kr : "Pretendard";
+  --font-family-imperial : "Imperial Script";
+
+  /* font size */
+  --font-16: 1rem;
+
+  --vh: 100vh;
+  --card-radius-34: 34px;
+  --card-radius-30: 30px;
+}
+
+
+/************************************************ basic */
+.wrap form {
+  width: 100%;
+}
+.twp-16 {
+  font-size: calc(1*1rem); line-height: 20px;
+  color: var(--color-white);
+}
+.ft-fmly-notokr {
+  font-family: var(--font-family-notokr);
+}
+
+.height-150 {
+  height: 150px;
+}
+
+.mt0 {
+  margin-top: 0px;
+}
+
+.pt-18 {
+  padding-top: 18px;
+}
+
+
+i.icon {
+  display: flex;
+  justify-content: center; align-items: center;
+}
+
+.radius-0 {
+  border-radius: 0;
+}
+.radius-7 {
+  border-radius: 7px;
+}
+.radius-16 {
+  border-radius: 16px;
+}
+.bg-2 {
+  background-color: rgba(16, 43, 75, .8);
+}
+
+
+@media screen and (min-width: 430px) {
+  /********************** 해상도 width 1600 이하일 경우 */
+}

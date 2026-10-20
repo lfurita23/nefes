@@ -1,0 +1,286 @@
+
+/* ---------- 풀페이지 래퍼 ---------- */
+#wrap{
+  height:100vh;height:100dvh;
+  overflow-y:auto;overflow-x:hidden;
+  scroll-snap-type:y mandatory;      /* 휠 한 번 = 섹션 하나 */
+  overscroll-behavior:contain;
+  scrollbar-width:none;outline:none;
+}
+#wrap::-webkit-scrollbar{display:none}
+.sec{
+  position:relative;height:100vh;height:100dvh;overflow:hidden;
+  background:var(--bg);
+  scroll-snap-align:start;
+  scroll-snap-stop:always;           /* 섹션을 건너뛰지 않음 */
+}
+/* 필름 그레인 */
+.sec::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.35;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .5  0 0 0 0 .5  0 0 0 0 .5  0 0 0 .18 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+.blob {position:absolute; pointer-events:none} /* border-radius:50%;filter:blur(70px); */
+
+
+/* ---------- 헤더 (두 번째 화면부터) ---------- */
+#header{
+  position:fixed;top:0;left:0;right:0;height:var(--header-h);z-index:50;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 5.6rem;
+  background:rgba(255,255,255,.72);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  box-shadow:0 0 1.4rem rgba(0,0,0,.08);
+  opacity:0;transform:translateY(-120%);pointer-events:none;
+  transition:opacity .5s ease,transform .6s cubic-bezier(.65,.05,.25,1);
+}
+body.has-header #header{opacity:1;transform:none;pointer-events:auto}
+.logo{font-family:'Playball',cursive;font-size:3rem;color:var(--blue);line-height:1}
+#header nav{display:flex;gap:2.4rem;font:500 1rem 'Roboto',sans-serif;color:#666}
+#header nav a{transition:color .3s}
+#header nav a:hover,#header nav a.on{color:var(--blue)} 
+#header nav a.on{font-weight:700}
+
+/* ---------- 1. Main ---------- */
+#main { background: var(--bg-white); }
+#main .blob.b1 {right :-50%; top: -98%; width: 1591px; height: 1591px; opacity: 1; background: url('../image/Ellipse.jpg') no-repeat;}
+/* {width:42rem;height:26rem;right:-8rem;top:-9rem;background:#1e88e5;opacity:.95} */
+#main .blob.b2 { left: -20%; bottom: -52%; opacity:1; width: 995px; height: 995px; background: url("../image/light_vector_1.png");}
+#main .blob.b3 { left: 5%; bottom: -50%; opacity:1; width: 734px; height: 734px; background: url("../image/light_vector_2.png");}
+.hero{
+  position:absolute;left:50%;top:47%;transform:translate(-50%,-50%);
+  display:flex;align-items:flex-end;z-index:2;
+}
+.hero .p{ font-family: var(--font-family-imperial),cursive; font-size:19rem; line-height:.62;color:var(--blue); margin-right:-.6rem; transform:translateY(1.2rem); -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color: var(--blue, #2C67FA); z-index: 1; left: -33%;}
+.hero .rest{position:relative;font:300 12.4rem/1 'Lexend',sans-serif;letter-spacing:-.02em;color:#1e1e1e}
+.hero .rest small{position:absolute;left: 4.8rem; top: -1.4rem; font: 500 2.4rem 'Lexend',sans-serif; letter-spacing: -0.15rem}
+.hero .word{display:flex;align-items:flex-end}
+.gnb{
+  position:absolute;left:50%;bottom:12%;transform:translateX(-50%);
+  display:flex;gap:4.6rem;z-index:2;font:500 1.3rem 'Roboto',sans-serif;
+}
+.gnb a{position:relative;display:flex;flex-direction:column;align-items:center;gap:.9rem;padding-top:1rem;min-width:6rem;color:#222}
+.gnb a::before{content:"";width:.35rem;height:.35rem;border-radius:50%;background:#888;transition:.3s}
+.gnb a.on{color:var(--cyan);font-weight:700}
+.gnb a.on::before{width:2.4rem;height:.15rem;border-radius:0;background:var(--cyan);box-shadow:0 0 1.6rem 1rem rgba(10,165,232,.45)}
+.gnb a:not(.on):hover{color:var(--blue)}
+
+/* ---------- 2. About / Activities ---------- */
+#about .blob.b1 { left: -20%; top: -43%; opacity:1; width: 995px; height: 995px; background: url("../image/light_vector_1.png");}
+#about .blob.b2 { left: 5%; top: -20%; opacity:1; width: 734px; height: 734px; background: url("../image/light_vector_2.png");}
+#about .wrap2{
+  position:relative;z-index:2;height:100%;
+  display:grid;grid-template-columns:45.6% 1fr;padding-top:var(--header-h);
+}
+.intro{align-self:center;padding:8rem 0 0 5.2rem}
+.intro h2{font-weight:300;font-size:3.35rem;line-height:1.5;color:#222;letter-spacing:-.02em}
+.intro h2 b{display:block;font-weight:700;color:var(--blue)}
+.intro p{margin-top:3.6rem;font-size:1.6rem;line-height:1.5;color:#777;font-weight:300;letter-spacing:-.02em;max-width:31rem}
+.intro p+p{margin-top:1rem;font-size:1.5rem;max-width:30rem}
+.info{padding:8rem 5rem 0 0;align-self:start}
+.row{display:grid;grid-template-columns:9.6rem 1fr}
+.label{font:700 1.7rem 'Pretendard',sans-serif;color:var(--blue);letter-spacing:-.02em}
+.label span{display:block;margin-top:.6rem;font:400 1.05rem 'Pretendard',sans-serif;color:#777}
+.top{display:grid;grid-template-columns:1fr 1fr;margin-bottom:5.2rem}
+.top .row{grid-template-columns:9.6rem 1fr}
+.top .row+.row{grid-template-columns:9.7rem 1fr;padding-left:1.4rem}
+.card b{display:block;font-size:1rem;font-weight:700;color:#222}
+.card b em{font-style:normal;margin-left:1.8rem}
+.card p,.card small{display:block;font-size:.95rem;color:#666;line-height:1.85}
+.acts{display:grid;grid-template-columns:1fr 1fr;column-gap:2rem;row-gap:1.8rem}
+.act b{display:block;font-size:1.15rem;font-weight:700;color:#222;margin-bottom:.5rem}
+.act span{display:block;font:500 1.1rem 'Roboto','Pretendard',sans-serif;color:#777;margin-bottom:.25rem}
+.act small{display:block;font:400 .82rem 'Roboto',sans-serif;color:#888}
+
+
+/* ---------- 3. Work experience ---------- */
+.center-sec{display:flex;flex-direction:column;align-items:center;justify-content:center;padding-top:var(--header-h)}
+.center-sec>*{position:relative;z-index:2}
+.title{position:relative;font:600 3.4rem 'Roboto',sans-serif;letter-spacing:-.03em;color:#111}
+.title::before{content:"";position:absolute;left:-1.6rem;top:-1.2rem;width:3rem;height:3rem;border-radius:50%;background:#3a9bf0;opacity:.55;filter:blur(8px)}
+#work .blob.b1{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 1772px; height: 992px; background: url(../image/diagram-2.png) no-repeat; opacity:1}
+#work .blob.b2{width:24rem;height:28rem;right:4%;top:30%;background:#9cc9f5;opacity:.55}
+.desc{margin-top:1.4rem;font-size:.92rem;color:#777;letter-spacing:-.01em}
+.device{
+  margin-top:2.6rem;width:51vw;max-width:62rem;aspect-ratio:1.5/1;max-height:60vh;
+  background:#fff;border-radius:2rem;padding:.55rem;
+  box-shadow:0 0 0 .1rem #e8eef7,0 0 2.4rem rgba(43,100,245,.18);
+}
+.slides{position:relative;width:100%;height:100%;border-radius:1.6rem;overflow:hidden;background:#222;
+  touch-action:pan-y;cursor:grab;user-select:none;-webkit-user-select:none}
+.slides.drag{cursor:grabbing}
+.track{display:flex;height:100%;transition:transform .55s cubic-bezier(.22,.7,.2,1);will-change:transform}
+.track.nodur{transition:none}
+.slide{position:relative;flex:0 0 100%;height:100%}
+.slide .shot{background-image:linear-gradient(135deg,#46586a,#fff)}
+.slide .shot{position:absolute;inset:0;background:#3a4a5a center/no-repeat}
+/* .slide .shot{position:absolute;inset:0;background:#3a4a5a center/cover no-repeat} */
+.slide .info-p{
+  position:absolute;right:0;top:0;bottom:0;width:50%;padding:2rem 2.2rem;
+  background:rgba(30,30,30,.86);color:#fff;
+  display:flex;flex-direction:column;
+}
+.slide h3{font-size:1.5rem;font-weight:700;margin-bottom:1.6rem}
+.slide .role{color:#1fb3f2;font-weight:500;font-size:1.05rem;margin-bottom:.7rem}
+.slide .pct{font-size:.98rem;line-height:1.9;color:var(--fc-placeholder);}
+.slide .pct b{margin-left:1rem;color:var(--fc-white);}
+.slide .sk{margin-top:1.5rem;color:#1fb3f2;font-size:1.05rem;font-weight:500}
+.slide .sk+p{margin-top:.4rem;font-size:.98rem;line-height:1.6;color:var(--fc-placeholder);}
+.btns{margin-top:auto;display:flex;gap:.8rem;padding-bottom:.4rem}
+.btns a{padding:.75rem 1.1rem;border-radius:.3rem;font-size:.82rem;background:#2b6cf5;color:#fff;transition:filter .3s}
+.btns a+a{background:#12bcd4}
+.btns a:hover{filter:brightness(1.12)}
+.dots{display:flex;gap:.6rem;margin-top:2.2rem}
+.dots button{width:.42rem;height:.42rem;border-radius:50%;border:0;background:#cfd8e6;cursor:pointer;padding:0}
+.dots button.on{background:#3a9bf0}
+
+
+/* ---------- 4. Figma Assets ---------- */
+#assets .blob.b1{width:24rem;height:20rem;left:-6rem;bottom:-8rem;background:url('../image/diagram-2.png') no-repeat;opacity:1}
+.embeds{margin-top:6.4rem;display:flex;gap:1.9rem}
+.embed{
+  width:36.6rem;height:25rem;border-radius:1.8rem;padding:.55rem;background:#fff;
+  box-shadow:0 0 0 .1rem #eef1f6,0 0 1.8rem rgba(0,0,0,.06);
+}
+.embed>div,.embed iframe{width:100%;height:100%;border:0;border-radius:1.4rem;background:#1e1e1e;display:block}
+
+/* Publishing view 옆 사이트 URL */
+.btns{flex-wrap:wrap;align-items:center}
+.btns a.site-url{
+  background:transparent;border:1px solid rgba(255,255,255,.7);color:#fff;
+}
+.btns a.site-url:hover{background:rgba(255,255,255,.14);filter:none}
+/* 슬라이드 프레임 안쪽 가장자리 은은한 그림자 (슬라이드 위에 고정, 클릭/드래그 방해 없음) */
+.slides{background:#fff}
+.slides::after{
+  content:"";position:absolute;inset:0;z-index:3;pointer-events:none;
+  border-radius:inherit;
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.05),inset 0 0 .75rem rgba(0,0,0,.2);
+}
+/* 스크린샷 이미지 자체의 가장자리 선이 보이지 않도록 사방 .8rem 크게 깔아 잘라냄 */
+.slides .slide{overflow:hidden;z-index:1}
+.slides .slide.active{z-index:2}
+.slides .slide .shot{inset:-.8rem}    
+/* Skills 아래 URL (PC / 모바일) */
+.slides .urls{display:flex;gap:1.4rem;margin-top:.4rem;font-size:.98rem}
+.slides .urls a{color:var(--fc-placeholder);text-decoration:underline;text-underline-offset:.3rem;transition:color .3s}
+.slides .urls a:hover{color:#FFE526}
+/* Work experience / Figma Assets: 화면 정중앙 정렬 + 화면 높이에 맞춰 크기 조정 */
+@media (min-width:901px){
+  section.center-sec{
+    padding:var(--header-h) 0;          /* 위·아래 동일 → 화면 정중앙 */
+    justify-content:center;align-items:center;
+  }
+  section.center-sec .device{
+    /* 높이 = 화면 높이 - (제목·설명·점·헤더 여백), 비율 3:2 유지 */
+    width:min(61.25rem,calc((100vh - 24rem) * 1.5));
+    width:min(61.25rem,calc((100dvh - 24rem) * 1.5));
+    max-width:none;max-height:none;height:auto;aspect-ratio:3/2;
+  }
+}
+
+/* ---------- 5. Contact us ---------- */
+#contact.center-sec{justify-content:flex-start;padding-top:19vh}
+#contact .blob{position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none}
+#contact .blob.b1{width:2528px;height:1386px;left:50%;top:50%;transform: translate(-48%, -34%); background: url('../image/diagram-4.png') no-repeat; opacity:1}
+#contact .desc{text-align:center;line-height:1.35;margin-top:2.2rem}
+.contact-links{display:flex;align-items:center;justify-content:center;gap:5.6rem;margin-top:min(20vh,14rem)}
+.contact-links li{display:flex;align-items:center;gap:1.4rem}
+.contact-links b{font:700 1.8rem 'Pretendard','Roboto',sans-serif;color:#2b64f5;letter-spacing:-.02em}
+.contact-links span{font:400 1.1rem 'Pretendard','Roboto',sans-serif;color:#777}
+.contact-links a,.contact-links button{display:flex;align-items:center;gap:1.2rem;color:inherit}
+.contact-links button{background:none;border:0;padding:.3rem;cursor:pointer;line-height:0}
+.contact-links svg{width:1.3rem;height:1.3rem;stroke:#8a94a6;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:stroke .3s}
+.contact-links a:hover svg,.contact-links button:hover svg{stroke:#2b64f5}
+.skill-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-top:3.4rem}
+.skill-chips li{padding:.375rem 1.5rem;border:1px solid #cfd8e6;border-radius:99px;font:400 .9rem/1.2 'Pretendard','Roboto',sans-serif;color:#7b8794;background:rgba(255,255,255,.5)}
+.status{position:absolute!important;left:50%;bottom:18%;transform:translateX(-50%);display:flex;align-items:center;gap:1.1rem;font:400 .95rem 'Roboto','Pretendard',sans-serif;color:#222;white-space:nowrap}
+.status i{width:.32rem;height:.32rem;border-radius:50%;background:#34c759}
+.copy-toast{position:fixed;left:50%;bottom:6rem;z-index:60;transform:translate(-50%,1rem);padding:.8rem 1.4rem;border-radius:99px;background:rgba(30,30,30,.88);color:#fff;font-size:.9rem;opacity:0;pointer-events:none;transition:.3s}
+.copy-toast.show{opacity:1;transform:translate(-50%,0)}
+/* =====================================================
+   태블릿 / 모바일 (폭 900px 이하)
+   - 풀페이지 스냅 대신 일반 세로 스크롤
+   - 데스크톱 레이아웃을 한 열로 재배치
+   ===================================================== */
+@media (max-width:900px){
+  html{font-size:14px;-webkit-text-size-adjust:100%}
+  body{overflow:auto;height:auto}
+  #wrap{height:auto;overflow:visible;scroll-snap-type:none}
+  .sec{height:auto;min-height:100vh;min-height:100svh;scroll-snap-align:none;scroll-snap-stop:normal}
+
+  /* 헤더 */
+  #header{padding:0 1.4rem}
+  #header .logo svg{width:3.6rem;height:auto}
+  #header nav{gap:1.1rem;font-size:clamp(.72rem,3.3vw,.9rem)}
+
+  /* 1. main : 글자·배경을 화면 폭(vw)에 비례해서 축소 */
+  #main .blob.b1{width:140vw;height:140vw;right:-70vw;top:-100vw;background-size:100% 100%}
+  #main .blob.b2{width:120vw;height:120vw;left:-30vw;bottom:-70vw;background-size:100% 100%}
+  #main .blob.b3{width:90vw;height:90vw;left:5%;bottom:-55vw;background-size:100% 100%}
+  .hero{top:44%;max-width:96vw}
+  .hero .p{font-size:34vw;margin-right:-1.2vw;transform:translateY(2.4vw)}
+  .hero .rest{font-size:22.5vw}
+  .hero .rest small{font-size:4.4vw;left:8.8vw;top:-2.6vw;letter-spacing:-.02em}
+  .gnb{width:96vw;gap:1.1rem;justify-content:center;bottom:9%;font-size:clamp(.72rem,3.2vw,.95rem)}
+  .gnb a{min-width:0}
+
+  /* 2. About / Activities */
+  #about .blob.b1{width:120vw;height:120vw;left:-30vw;top:-70vw;background-size:100% 100%}
+  #about .blob.b2{width:90vw;height:90vw;left:5%;top:-55vw;background-size:100% 100%}
+  #about .wrap2{display:block;height:auto;padding:calc(var(--header-h) + 1.5rem) 0 4rem}
+  .intro{padding:2rem 1.6rem 0;max-width:46rem;margin:0 auto}
+  .intro h2{font-size:2.3rem}
+  .intro p{margin-top:1.8rem;font-size:1.15rem;max-width:none}
+  .intro p+p{font-size:1.1rem;max-width:none}
+  .info{padding:2.4rem 1.6rem 0;max-width:46rem;margin:0 auto}
+  .top{grid-template-columns:1fr;row-gap:2rem;margin-bottom:2.8rem}
+  .row,.top .row,.top .row+.row{grid-template-columns:7.2rem 1fr;padding-left:0}
+  .label{font-size:1.5rem}
+  .acts{grid-template-columns:1fr;row-gap:1.6rem}
+
+  /* 3~5 공통 */
+  .center-sec{justify-content:flex-start;padding:calc(var(--header-h) + 2.5rem) 1rem 3rem}
+  .title{font-size:2.6rem}
+  .desc{font-size:.9rem;line-height:1.5;text-align:center;padding:0 .6rem}
+
+  /* 3. Work experience : 위 스크린샷 / 아래 설명 */
+  #work .blob.b1{width:220vw;height:123vw;background-size:100% 100%}
+  .device{width:92vw;max-width:46rem;height:auto;max-height:none;aspect-ratio:auto;padding:.45rem;border-radius:1.6rem;margin-top:1.8rem}
+  .slides{height:auto}
+  .track{height:auto;align-items:stretch}
+  .slides .slide{height:auto;display:flex;flex-direction:column}
+  .slides .slide .shot{position:relative;inset:auto;flex:none;width:100%;height:auto;aspect-ratio:16/10}
+  .slides .slide .info-p{position:static;flex:1;width:100%;padding:1.6rem 1.4rem 1.8rem;background:rgba(30,30,30,.96)}
+  .slide h3{font-size:1.35rem;margin-bottom:1.2rem}
+  .btns{margin-top:1.6rem;padding-bottom:0}
+  .dots{flex-wrap:wrap;justify-content:center;max-width:80vw;margin-top:1.6rem}
+
+  /* 4. Figma Assets */
+  .embeds{flex-direction:column;align-items:center;gap:1.2rem;margin-top:2.4rem}
+  .embed{width:88vw;max-width:36.6rem;height:62vw;max-height:25rem}
+
+  /* 5. Contact us */
+  #contact.center-sec{padding:calc(var(--header-h) + 3rem) 1rem 6rem}
+  #contact .blob.b1{width:240vw;height:131.6vw;background-size:100% 100%}
+  .contact-links{flex-direction:column;align-items:flex-start;gap:1.4rem;width:min(100%,22rem);margin-top:3rem}
+  .contact-links li{flex-wrap:wrap;gap:.6rem 1rem}
+  .contact-links b{font-size:1.5rem;min-width:5.2rem}
+  .contact-links span{font-size:1rem}
+  .skill-chips{padding:0 .5rem;margin-top:2.4rem}
+  .status{position:static!important;transform:none;margin-top:3rem}
+  .copy-toast{bottom:3rem}
+}
+
+/* 태블릿(601~900px): 활동이력은 2열 */
+@media (min-width:601px) and (max-width:900px){
+  .acts{grid-template-columns:1fr 1fr;column-gap:2rem}
+}
+
+/* 작은 폰 */
+@media (max-width:480px){
+  html{font-size:13px}
+}
+@media (prefers-reduced-motion:reduce){
+  #header,.track{transition-duration:.01s}
+}
